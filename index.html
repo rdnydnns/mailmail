@@ -5,6 +5,7 @@
   <title>MailMail</title>
 
   <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 
   <!-- modernizr -->
@@ -12,32 +13,34 @@
 </head>
 
 <body ng-controller="MailCtrl">
-  <!-- searchbar -->
-  <form>
-    <input type="search" placeholder="search"/>
-  </form>
+  <div class="main">
+    <!-- searchbar -->
+    <form class="searchbar">
+      <input type="search" placeholder="Search..."/>
+    </form>
 
-  <!-- sidebar -->
-  <aside>
-    <h1>Person</h1>
-    <h2>Company</h2>
-  </aside>
+    <!-- sidebar -->
+    <aside class="sidebar">
+      <h1>Person</h1>
+      <h2>Company</h2>
+    </aside>
 
-  <!-- messages -->
-  <section>
-    <!-- show messages -->
-    <div infinite-scroll="getMoreMessages()">
-      <article ng-repeat="message in messages track by $index">
-        <p>Subject: {{message.subject}}</p>
-        <p>From: <span>{{message.from}}</span></p>
-        <p ng-if="message.cc.length">
-          CC: <span ng-repeat="name in message.cc">{{name}}</span>
-        </p>
-      </article>
-    </div>
-    <!-- show alert if error -->
-    {{alert}}
-  </section>
+    <!-- messages -->
+    <section class="messages">
+      <!-- show messages -->
+      <div infinite-scroll="getMoreMessages()">
+        <article class="message" ng-repeat="message in messages track by $index">
+          <p class="subject"><b>{{message.subject}}</b></p>
+          <p>From: <span class="email">{{message.from}}</span></p>
+          <p ng-if="message.cc.length">
+            CC: <span class="email" ng-repeat="name in message.cc">{{name}}</span>
+          </p>
+        </article>
+      </div>
+      <!-- show alert if error -->
+      {{alert}}
+    </section>
+  </div>
 
   <!-- scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

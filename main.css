@@ -1,12 +1,2 @@
-html,
-body {
-  width: 100%;
-}
-
-body {
-  background: #fafafa;
-  color: #333;
-  font-size: 1em;
-  font-family: sans-serif;
-  height: 100%;
-}
+*,*:before,*:after{box-sizing:border-box}html,body{width:100%}body{background:#fff;color:#333;height:100%;width:100%}.main{background:#eee;max-width:65em;margin:0 auto}.searchbar{background:#34495e;padding:1em}.searchbar input[type='search']{background:none;border:0;border-bottom:2px solid #fff;color:#fff;outline:none;padding:0.5em 0;width:100%}@media (min-width: 35em){.searchbar{position:fixed;top:0;height:5em;width:15em}}@media (min-width: 60em){.searchbar{margin-left:20em;width:45em}}.sidebar{padding:2em 1em;text-align:center}.sidebar h1,.sidebar h2{margin:0}.sidebar h2{font-weight:normal}@media (min-width: 35em){.sidebar{position:fixed;top:5em;width:15em}}@media (min-width: 60em){.sidebar{top:0;width:20em}}.messages{background:#fff}@media (min-width: 35em){.messages{margin-left:15em}}@media (min-width: 60em){.messages{margin-left:20em;padding-top:5em}}.message{border-bottom:2px solid #eee;padding:1em}.message p{margin:0}.message .subject{margin-bottom:0.5em}.message .email{background:#eee;display:inline-block;font-size:80%;margin:0 0.5em 0.5em 0;padding:2px}
+/*# sourceMappingURL=main.css.map */
